@@ -54,7 +54,7 @@ switch (FromTo){
 		System.out.println("Blr--"+dataHandle.getBlr());
 		//ele.sendKeys(selectValue);
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
-		//selectCityFromDisplayed(selectValue);
+		selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		
 		//select date
@@ -69,7 +69,7 @@ switch (FromTo){
 		selectValue=Util.dataHandle.getDelhi();
 		//ele.sendKeys(selectValue);
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
-		//selectCityFromDisplayed(selectValue);
+		selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		break;
 	case "From3" :
@@ -82,7 +82,7 @@ switch (FromTo){
 		selectValue=Util.dataHandle.getPhuket();
 		//ele.sendKeys(selectValue);
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
-		//selectCityFromDisplayed(selectValue);
+		selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		break;		
 	
