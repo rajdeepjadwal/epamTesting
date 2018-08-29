@@ -44,7 +44,8 @@ switch (FromTo){
 		ele.clear();
 		selectValue=Util.dataHandle.getPune();
 		ele.sendKeys(selectValue); 
-		selectCityFromDisplayed(selectValue);
+		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
+		//selectCityFromDisplayed(selectValue);
 		break;
 	case "To1" :
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "To1CityTextBox")));
