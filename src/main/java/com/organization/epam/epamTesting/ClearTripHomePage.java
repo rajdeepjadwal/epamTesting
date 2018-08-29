@@ -43,7 +43,7 @@ switch (FromTo){
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "From1CityTextBox")));
 		ele.clear();
 		selectValue=Util.dataHandle.getPune();
-		ele.sendKeys(selectValue); 
+		//ele.sendKeys(selectValue); 
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
 		//selectCityFromDisplayed(selectValue);
 		break;
@@ -52,8 +52,9 @@ switch (FromTo){
 		ele.clear();
 		selectValue=Util.dataHandle.getBlr();
 		System.out.println("Blr--"+dataHandle.getBlr());
-		ele.sendKeys(selectValue);
-		selectCityFromDisplayed(selectValue);
+		//ele.sendKeys(selectValue);
+		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
+		//selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		
 		//select date
@@ -66,8 +67,9 @@ switch (FromTo){
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "To2CityTextBox")));
 		ele.clear();
 		selectValue=Util.dataHandle.getDelhi();
-		ele.sendKeys(selectValue);
-		selectCityFromDisplayed(selectValue);
+		//ele.sendKeys(selectValue);
+		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
+		//selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		break;
 	case "From3" :
@@ -78,8 +80,9 @@ switch (FromTo){
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "To3CityTextBox")));
 		ele.clear();
 		selectValue=Util.dataHandle.getPhuket();
-		ele.sendKeys(selectValue);
-		selectCityFromDisplayed(selectValue);
+		//ele.sendKeys(selectValue);
+		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
+		//selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		break;		
 	
