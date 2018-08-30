@@ -38,12 +38,11 @@ public void enterValueInFromAndToTextBoxes(String FromTo) throws IOException {
 	Actions action=new Actions(driver);
 	Util util = null;
 	util.jsonToPojo();
-switch (FromTo){
+	switch (FromTo){
 	case "From1" :
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "From1CityTextBox")));
 		ele.clear();
 		selectValue=Util.dataHandle.getPune();
-		//ele.sendKeys(selectValue); 
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
 		//selectCityFromDisplayed(selectValue);
 		break;
@@ -53,7 +52,6 @@ switch (FromTo){
 		selectValue=Util.dataHandle.getBlr();
 		System.out.println("Blr--"+dataHandle.getBlr());
 		ele.sendKeys(selectValue);
-		//action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
 		selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
 		
@@ -67,7 +65,6 @@ switch (FromTo){
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "To2CityTextBox")));
 		ele.clear();
 		selectValue=Util.dataHandle.getDelhi();
-		//ele.sendKeys(selectValue);
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
 		selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
@@ -80,7 +77,6 @@ switch (FromTo){
 		ele=driver.findElement(By.xpath(Util.getXpath(getClass().getSimpleName(), "To3CityTextBox")));
 		ele.clear();
 		selectValue=Util.dataHandle.getPhuket();
-		//ele.sendKeys(selectValue);
 		action.moveToElement(ele).sendKeys(selectValue).click().build().perform();
 		selectCityFromDisplayed(selectValue);
 		selectDateFromCalendarOption(FromTo);
@@ -128,14 +124,18 @@ public void selectDateFromCalendarOption(String toNum) throws IOException {
 		break;
 		
 	case "To2" :
-		xpath=Util.getXpath(getClass().getSimpleName(),"OneDaysAfterOfSelDateFromCal");
+		xpath=Util.getXpath(getClass().getSimpleName(),"TodayDateFromCal");
+		calIconXpath=Util.getXpath(getClass().getSimpleName(),"From2To2CalendarIcon");
+		calIconEle=driver.findElement(By.xpath(calIconXpath));
+		calIconEle.click();
+		calIconEle.click();
 		Util.waitForElementVisible(driver, By.xpath(xpath));
 		ele=$(xpath);
 		ele.click();
 		break;
 		
 	case "To3":
-		xpath=Util.getXpath(getClass().getSimpleName(),"OneDaysAfterOfSelDateFromCal");
+		xpath=Util.getXpath(getClass().getSimpleName(),"TodayDateFromCal");
 		calIconXpath=Util.getXpath(getClass().getSimpleName(),"From3To3CalendarIcon");
 		calIconEle=driver.findElement(By.xpath(calIconXpath));
 		calIconEle.click();

@@ -67,6 +67,5 @@ public class Util {
 		File jsonFile=new File(file);			
 		ObjectMapper mapper = new ObjectMapper();	
 		dataHandle=mapper.readValue(jsonFile, DataHandleClass.class);	
-	System.out.println(Util.dataHandle.getPune());	
 	}
 }
