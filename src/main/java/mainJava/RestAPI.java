@@ -24,11 +24,11 @@ public class RestAPI {
 	Map<String,String> headers=new HashMap<String,String>();
 
 
-
+	
 public void getRequest(){
 			RestAssured.baseURI=URI;
 			httpRequest = RestAssured.given();
-			response = httpRequest.get("/4");
+			response = httpRequest.get("/3");
 			responseBody=response.getBody();
 			JsonPath jsonPath=response.jsonPath();
 			name=jsonPath.get("first_name");
@@ -43,7 +43,7 @@ public void postRequest() throws JsonProcessingException{
 	headers.put("Content-Type","application/json");
 	RestAssured.baseURI=URI;
 	httpRequest = RestAssured.given();
-	JSONObject requestParam=requestParam(4,"Jyotiram","Ghadge","jyotiramghadge.gmail.com");
+	JSONObject requestParam=requestParam(8,"Nitesh","Jaiswal","niteshjaiswal.gmail.com");
 	httpRequest.header("Content-Type", "application/json");
 	httpRequest.body(requestParam.toString());
 	response = httpRequest.post();
@@ -55,10 +55,10 @@ public void putRequest(){
 	headers.put("Content-Type","application/json");
 	RestAssured.baseURI=URI;
 	httpRequest = RestAssured.given();
-	JSONObject requestParam=requestParam(4,"Jyotiram","GhadgeJI","jyotiramghadge.gmail.com");
+	JSONObject requestParam=requestParam(8,"Jyotiram","GhadgeJI","jyotiramghadge.gmail.com");
 	httpRequest.header("Content-Type", "application/json");
 	httpRequest.body(requestParam.toString());
-	response = httpRequest.put("/4");
+	response = httpRequest.put("/8");
 	System.out.println(response.getStatusCode());
 }
 
@@ -67,8 +67,10 @@ public void deleteRequest(){
 	headers.put("Content-Type","application/json");
 	RestAssured.baseURI=URI;
 	httpRequest = RestAssured.given();
-	response = httpRequest.delete("/4");
+	response = httpRequest.delete("/8");
+	responseBody=response.getBody();
 	System.out.println(response.getStatusCode());
+	System.out.println(responseBody.asString());
 }
 
 public JSONObject requestParam(int num,String firstName,String lastName,String email) {
