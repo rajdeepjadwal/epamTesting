@@ -1,10 +1,9 @@
-node-js commands
+node-js commands:
 npm install -g json-server 
 json-server --watch db.json 
 
 
-db.json file
-
+db.json file:
 {
   "employees": [
     {
@@ -27,4 +26,11 @@ db.json file
     }
   ]
 }
+
+
+
+Jenkins integration with GITHUB:
+Add webhook in github repository seting
+In payroll URL add path --http://10.22.94.92:8080/github-webhook/
+And in Jenkins create job and give global path of JDK,Maven Home,git.exe path
 
