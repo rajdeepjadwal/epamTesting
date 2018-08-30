@@ -5,10 +5,9 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.organization.epam.epamTesting.ClearTripHomePage;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import mainJava.ClearTripHomePage;
 
 public class ClearTripHomeStep  {
 
@@ -25,6 +24,7 @@ public class ClearTripHomeStep  {
 	@When("^user select multi-city radio button on clear trip home page$")
 	public void selectMultipleCityRadioBtn() throws IOException {
 		clearTrpHomepage.selectMultipleCityRadioBtn();
+	
 	}
 	
 	@When("^user enter value in \"([^\"]*)\" text box$")
