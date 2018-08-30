@@ -1,0 +1,29 @@
+node-js commands
+npm install -g json-server 
+json-server --watch db.json 
+
+
+db.json file
+
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Rajdeep",
+      "last_name": "Jadwal",
+      "email": "rajdeepjadwal@gmail.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Yogesh",
+      "last_name": "Jagrupe",
+      "email": "yogeshjagrupe@gmail.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Prashant",
+      "last_name": "Sawale",
+      "email": "prashantsawale@gmail.com"
+    }
+  ]
+}
