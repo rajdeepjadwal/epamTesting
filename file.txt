@@ -34,3 +34,7 @@ Add webhook in github repository seting
 In payroll URL add path --http://10.22.94.92:8080/github-webhook/
 And in Jenkins create job and give global path of JDK,Maven Home,git.exe path
 
+
+
+Spring framework
+Bean Class(Employee) > XML file >Demo Class(Client)>Load jars>Run

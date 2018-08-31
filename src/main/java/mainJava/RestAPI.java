@@ -24,18 +24,17 @@ public class RestAPI {
 	Map<String,String> headers=new HashMap<String,String>();
 
 
-	
+	@Test
 public void getRequest(){
 			RestAssured.baseURI=URI;
 			httpRequest = RestAssured.given();
-			response = httpRequest.get("/3");
+			response = httpRequest.get("/8");
 			responseBody=response.getBody();
 			JsonPath jsonPath=response.jsonPath();
 			name=jsonPath.get("first_name");
 			System.out.println(name);
 			System.out.println(responseBody.asString());
 			System.out.println("Status code--"+response.getStatusCode());
-		
 	}
 
 
@@ -62,7 +61,7 @@ public void putRequest(){
 	System.out.println(response.getStatusCode());
 }
 
-@Test
+
 public void deleteRequest(){
 	headers.put("Content-Type","application/json");
 	RestAssured.baseURI=URI;
