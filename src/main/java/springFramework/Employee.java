@@ -35,7 +35,14 @@ public void setEaddress(String eaddress) {
 }
 
 public Employee() {
-	
+	System.out.println("Employee object created");
 }
 
+public void myInit() {
+	System.out.println("--Object Initialised");
+}
+
+public void myDestroy() {
+	System.out.println("--Object Destroyed");
+}
 }

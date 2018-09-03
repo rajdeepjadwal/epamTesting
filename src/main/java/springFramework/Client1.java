@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-public class Client {
+public class Client1 {
 
 	
 	
@@ -25,11 +25,9 @@ public static void main(String[] args) {
 	
 	//common for Bean and  Application context
 	
-	Employee e1=(Employee) context.getBean("emp1");
-	Employee e2=context.getBean("emp2", Employee.class);
+	Employee1 e3=(Employee1) context.getBean("emp3");
 	
-	System.out.println("Employee1 Details :"+e1);
-	System.out.println("Employee2 Details :"+e2);
+	System.out.println("Employee1 Details :"+e3);
 	
 	ClassPathXmlApplicationContext cxt=(ClassPathXmlApplicationContext)context;
 	cxt.close(); //close the context

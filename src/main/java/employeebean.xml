@@ -5,8 +5,35 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id = "emp" class = "springFramework.Employee">
-      <property name = "eid" value = "0000"/>
+
+   <bean id = "adrs" class = "springFramework.Address">
+      <property name = "city" value = "Pune"/>
+      <property name = "state" value = "Maharashtra"/>
+      <property name = "zipCode" value = "411014"/>
+   </bean>
+   
+   <bean id = "emp3" class = "springFramework.Employee1">
+      <property name = "eid" value = "85155"/>
+      <property name = "ename" value = "Rajdeep"/>
+      <!-- <constructor-arg ref="adrs"></constructor-arg> -->
+      <property name = "address" ref = "adrs"/>
+   </bean>
+   
+   
+   
+   
+   
+   
+   <bean id = "emp1" class = "springFramework.Employee" init-method="myInit" destroy-method="myDestroy">
+      <property name = "eid" value = "85155"/>
+      <property name = "ename" value = "Rajdeep"/>
+      <property name = "eaddress" value = "WG Sheri,Pune, 411014"/>
+   </bean>
+   
+    <bean id = "emp2" class = "springFramework.Employee" init-method="myInit" destroy-method="myDestroy">
+      <property name = "eid" value = "85156"/>
+      <property name = "ename" value = "Rahul Sharma"/>
+      <property name = "eaddress" value = "Viman nagar,Pune, 411014"/>
    </bean>
 
 </beans>
